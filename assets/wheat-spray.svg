@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <defs>
+    <path id="spray-leaf" d="M 0 0&#xA;                              C -2 -20, -3 -50, -1 -78&#xA;                              L 0 -94&#xA;                              L 1 -78&#xA;                              C 3 -50, 2 -20, 0 0 Z"></path>
+  </defs>
+  <g transform="translate(50 96)">
+    <g transform="rotate(-26)"><use href="#spray-leaf"></use></g>
+    <g transform="rotate(0)"><use href="#spray-leaf"></use></g>
+    <g transform="rotate(26)"><use href="#spray-leaf"></use></g>
+  </g>
+</svg>

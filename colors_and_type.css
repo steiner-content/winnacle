@@ -1,0 +1,332 @@
+/* ============================================================
+   Winnacle Wealth — Colors & Type
+   Single source of truth for tokens. Load this on every surface.
+   ============================================================ */
+
+/* -------- Fonts (local + Google fallback) ---------------- */
+@font-face {
+  font-family: "Karla";
+  src: url("./fonts/Karla-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Karla";
+  src: url("./fonts/Karla-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Display headlines — DM Serif Display (Regular + Italic), uploaded.
+   The Regular is the canonical headline weight; Italic ships with the family
+   for the rare moments a real italic is called for (pull quotes only).
+   Italic is NOT used inside headlines. */
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("./fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("./fonts/DMSerifDisplay-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* The Winnacle Wealth wordmark is ALWAYS rendered as the PNG lockup
+   (assets/logo-horz-*.png / assets/crest-*.png). No web font stands in for it. */
+
+:root {
+  /* ============================================================
+     COLOR — RAW (intentionally small palette)
+
+     The system runs on 9 colors total:
+       Primary (3):   Navy, Navy Deep, Gold
+       Secondary (2): Teal, Cream
+       Neutrals (4):  Graphite, Stone, Fog, White
+
+     Two gradient endpoints (gold-glint / navy-lift) exist only as
+     internal aliases for the brand gradients — do not surface them
+     as standalone swatches.
+     ============================================================ */
+
+  /* Primary — locked to brand */
+  --ww-navy:        #1C2A5E;   /* primary brand color  · headers, nav, hero */
+  --ww-navy-deep:   #0F1633;   /* primary body text, emphasis              */
+  --ww-gold:        #C9A86A;   /* primary accent       · rules, glyphs     */
+
+  /* Primary tints — use for soft surfaces, hover washes, highlight blocks.
+     Mixed against cream, so they sit comfortably on the page background. */
+  --ww-navy-50:     #EDEFF5;   /* very pale navy wash      · alt section bg */
+  --ww-navy-100:    #D8DCE7;   /* light navy tint          · chip bg, divider blocks */
+  --ww-gold-50:     #F8F1DF;   /* very pale gold wash      · callout bg, highlight surface */
+  --ww-gold-100:    #EFE1BC;   /* light gold tint          · table header pill, hover state */
+
+  /* Secondary — occasional accents */
+  --ww-teal:        #407E8C;   /* secondary accent     · charts, alt CTAs  */
+  --ww-cream:       #FBF7EE;   /* paper surface        · page background   */
+
+  /* Neutrals — cool-cast, keyed to navy */
+  --ww-graphite:    #4A5168;   /* secondary text                            */
+  --ww-stone:       #7A8194;   /* tertiary text, metadata                   */
+  --ww-fog:         #DFE2EA;   /* hairlines, dividers, disabled             */
+  --ww-white:       #FFFFFF;   /* pure surface                              */
+
+  /* Gradient-only internals (do not use as a flat color anywhere) */
+  --__gold-glint:   #E2C892;
+  --__navy-lift:    #233573;
+
+  /* Semantic */
+  --ww-success:     #4F8C5A;
+  --ww-warning:     #C28A2A;
+  --ww-danger:      #B0413E;
+
+  /* Brand gradients (use as background-image) */
+  --ww-gradient-gold:   linear-gradient(135deg, var(--__gold-glint) 0%, var(--ww-gold) 60%, #A6864A 100%);
+  --ww-gradient-navy:   linear-gradient(180deg, var(--__navy-lift) 0%, var(--ww-navy) 60%, var(--ww-navy-deep) 100%);
+  --ww-rule-gold:       linear-gradient(90deg, transparent, var(--ww-gold) 12%, var(--__gold-glint) 50%, var(--ww-gold) 88%, transparent);
+
+  /* ===================== COLOR — SEMANTIC ===================== */
+  /* Foreground */
+  --fg1: var(--ww-navy-deep);       /* primary text */
+  --fg2: var(--ww-graphite);        /* secondary text */
+  --fg3: var(--ww-stone);           /* tertiary / metadata */
+  --fg-on-navy:    var(--ww-cream);
+  --fg-on-gold:    var(--ww-navy-deep);
+  --fg-accent:     var(--ww-navy);
+  --fg-accent-2:   var(--ww-teal);
+
+  /* Background */
+  --bg-page:       var(--ww-cream);
+  --bg-surface:    var(--ww-white);
+  --bg-raised:     var(--ww-cream);
+  --bg-tint:       var(--ww-fog);
+  --bg-navy:       var(--ww-navy);
+  --bg-navy-deep:  var(--ww-navy-deep);
+
+  /* Borders & rules */
+  --border-soft:   rgba(28, 42, 94, 0.10);
+  --border-strong: rgba(28, 42, 94, 0.22);
+  --border-gold:   var(--ww-gold);
+  --border-on-navy: rgba(226, 200, 146, 0.35);
+
+  /* Focus */
+  --focus-ring:    0 0 0 3px rgba(201, 168, 106, 0.45);
+
+  /* ===================== TYPE — FAMILIES ===================== */
+  --ff-display:    "DM Serif Display", "Iowan Old Style", Georgia, serif;
+  --ff-serif:      "DM Serif Display", Georgia, serif;
+  --ff-body:       "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --ff-mono:       ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  /* Weights — explicit so subhead/body never drift from Karla SemiBold / Regular */
+  --fw-body:       400;
+  --fw-subhead:    600;   /* Karla SemiBold — used for h4, subheads, button labels, eyebrows */
+  --fw-strong:     700;
+
+  /* ===================== TYPE — SCALE ===================== */
+  /* fluid where useful; absolute on slides */
+  --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.9375rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-56: 3.5rem;
+  --fs-64: 4rem;
+  --fs-80: 5rem;
+  --fs-96: 6rem;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-base:  1.55;
+  --lh-loose: 1.75;
+
+  --tracking-tight:  -0.01em;
+  --tracking-base:    0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.12em;   /* eyebrows, wordmark spacing */
+  --tracking-widest:  0.22em;   /* nav, very wide caps */
+
+  /* ===================== SPACING / RADII / SHADOW =========== */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+  --space-10: 128px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  /* Shadows — soft, cool-cast (navy-derived). Avoid heavy drops. */
+  --shadow-1: 0 1px 2px rgba(15, 22, 51, 0.06), 0 1px 1px rgba(15, 22, 51, 0.04);
+  --shadow-2: 0 4px 12px rgba(15, 22, 51, 0.08), 0 2px 4px rgba(15, 22, 51, 0.04);
+  --shadow-3: 0 12px 32px rgba(15, 22, 51, 0.12), 0 4px 10px rgba(15, 22, 51, 0.06);
+  --shadow-4: 0 28px 60px rgba(15, 22, 51, 0.18), 0 8px 18px rgba(15, 22, 51, 0.08);
+  --shadow-gold-glow: 0 0 0 1px rgba(201, 168, 106, 0.4), 0 8px 24px rgba(201, 168, 106, 0.18);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.32, 0.72, 0.24, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.9, 0.1, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 480ms;
+}
+
+/* ===================== TYPE — SEMANTIC CLASSES ===================== */
+/* Use class OR the underlying CSS variables. */
+
+html { color: var(--fg1); background: var(--bg-page); font-family: var(--ff-body); }
+body { font-family: var(--ff-body); font-size: var(--fs-16); line-height: var(--lh-base); color: var(--fg1); }
+
+.ww-eyebrow,
+.eyebrow {
+  font-family: var(--ff-body);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-subhead);   /* Karla SemiBold 600 */
+  letter-spacing: 0.04em;
+  text-transform: none;             /* Title Case — NOT all caps */
+  color: var(--ww-gold);
+}
+
+/* Display — always upright. The italic styles ship for very rare pull-quote
+   use; do NOT use italics inside H1–H4 headlines. */
+.ww-display, .h-display {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--ww-navy);
+}
+
+.ww-h1, h1 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.005em;
+  color: var(--ww-navy);
+  margin: 0 0 0.4em;
+}
+.ww-h2, h2 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  line-height: var(--lh-snug);
+  color: var(--ww-navy);
+  margin: 0 0 0.4em;
+}
+.ww-h3, h3 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  color: var(--ww-navy);
+  margin: 0 0 0.4em;
+}
+/* h4 — Karla SemiBold subhead (per brand direction) */
+.ww-h4, h4, .ww-subhead {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-subhead);    /* 600, Karla SemiBold */
+  font-size: var(--fs-18);
+  line-height: var(--lh-snug);
+  letter-spacing: 0;
+  color: var(--ww-navy);
+  margin: 0 0 0.4em;
+}
+
+/* Body — Karla Regular 400 (per brand direction). No drift. */
+.ww-body, p {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-base);
+  color: var(--fg1);
+  text-wrap: pretty;
+}
+.ww-body-lg { font-size: var(--fs-18); line-height: var(--lh-base); }
+.ww-body-sm { font-size: var(--fs-14); line-height: var(--lh-base); color: var(--fg2); }
+.ww-meta { font-size: var(--fs-12); line-height: 1.4; color: var(--fg3); letter-spacing: 0.02em; }
+
+.ww-pullquote {
+  font-family: var(--ff-display);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.3;
+  color: var(--ww-navy);
+}
+
+.ww-overline {
+  font-family: var(--ff-body);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-subhead);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ww-gold);
+}
+
+/* Gold rule — used under section headers across the brochure */
+.ww-rule-gold {
+  height: 2px;
+  width: 96px;
+  background: var(--ww-gradient-gold);
+  border: 0;
+  margin: 0.6em 0 1.2em;
+}
+
+a { color: var(--ww-teal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--ww-teal) 35%, transparent); transition: color var(--dur-fast) var(--ease-standard), border-color var(--dur-fast); }
+a:hover { color: var(--ww-navy); border-color: var(--ww-gold); }
+
+/* ============================================================
+   Duotone photography filter
+   The brand's house photo style. Apply `class="ww-duotone"` to an
+   <img> (or its wrapper) and the image is remapped:
+     shadows  → --ww-navy-deep   (#0F1633)
+     highlights → --ww-cream     (#FBF7EE)
+
+   How it works: filter definitions live in /duotone-filter.svg.
+   CSS references them via the SVG fragment id. Works cross-origin
+   in HTML/CSS, no <svg> injection needed in every page.
+
+   Reach for ww-duotone-warm (navy → gold) ONLY when the brief is
+   "marketing poster" — too loud for the system-wide default.
+
+   Full-color "golden hour" originals are allowed ONCE per piece
+   (cover slide, homepage hero); everything else gets the duotone.
+   ============================================================ */
+.ww-duotone,
+.ww-duotone img      { filter: url("#ww-duotone-navy"); }
+.ww-duotone-warm,
+.ww-duotone-warm img { filter: url("#ww-duotone-navy-gold"); }
+
+/* Surfaces & containers used across the system */
+
+.ww-surface { background: var(--bg-surface); border-radius: var(--radius-lg); box-shadow: var(--shadow-2); }
+.ww-surface-navy { background: var(--bg-navy); color: var(--fg-on-navy); border-radius: var(--radius-lg); }
+.ww-surface-cream { background: var(--ww-cream); border-radius: var(--radius-lg); }

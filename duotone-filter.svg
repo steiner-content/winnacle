@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+  <defs>
+    
+    <filter id="ww-duotone-navy" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="&#xA;        0.299 0.587 0.114 0 0&#xA;        0.299 0.587 0.114 0 0&#xA;        0.299 0.587 0.114 0 0&#xA;        0     0     0     1 0"></feColorMatrix>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.059 0.984"></feFuncR>
+        <feFuncG type="table" tableValues="0.086 0.969"></feFuncG>
+        <feFuncB type="table" tableValues="0.200 0.933"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+    
+    <filter id="ww-duotone-navy-gold" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="&#xA;        0.299 0.587 0.114 0 0&#xA;        0.299 0.587 0.114 0 0&#xA;        0.299 0.587 0.114 0 0&#xA;        0     0     0     1 0"></feColorMatrix>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.059 0.788"></feFuncR>
+        <feFuncG type="table" tableValues="0.086 0.659"></feFuncG>
+        <feFuncB type="table" tableValues="0.200 0.416"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
