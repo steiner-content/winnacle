@@ -440,6 +440,7 @@ p { margin: 0 0 14px; }
   background: var(--ww-white);
   box-shadow: 0 24px 60px rgba(15,22,51,0.10);
 }
+.hero-split--justher .hero-split-photo img { object-position: 38% center; }
 .hero-split--justher .hero-split-photo .photo-stamp {
   background: rgba(251,247,238,0.94);
   color: var(--ww-navy-deep);
