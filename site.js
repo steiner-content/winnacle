@@ -70,6 +70,40 @@
     });
   }
 
+  /* ---- Scroll reveal -------------------------------------- */
+  // Sections fade + rise into view. Opt-in is added here (not in the
+  // markup) so that with JS disabled everything renders fully visible.
+  // Honors prefers-reduced-motion and degrades gracefully without IO.
+  (function () {
+    var sections = document.querySelectorAll("section.sec");
+    if (!sections.length) return;
+
+    var reduce = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return; // leave visible
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    sections.forEach(function (sec) {
+      sec.classList.add("reveal-sec");
+      // Reveal anything already in (or near) the viewport synchronously,
+      // before first paint, so above-the-fold content never flashes.
+      if (sec.getBoundingClientRect().top < vh * 0.92) {
+        sec.classList.add("is-visible");
+      } else {
+        io.observe(sec);
+      }
+    });
+  })();
+
   /* ---- Lucide icons --------------------------------------- */
   if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
 })();
