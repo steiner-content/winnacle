@@ -317,8 +317,12 @@ p { margin: 0 0 14px; }
   font: 600 11px var(--ff-body); letter-spacing: 0.16em; text-transform: uppercase;
   padding: 7px 12px; border-left: 2px solid var(--ww-gold);
 }
+/* Taller variant for page heroes */
+.photo-band--tall { min-height: 540px; }
+.photo-band h1 { color: var(--ww-cream); }
 @media (max-width: 680px) {
   .photo-band { min-height: 400px; }
+  .photo-band--tall { min-height: 460px; }
   .photo-band > .photo-band-scrim { background: linear-gradient(180deg, rgba(15,22,51,0.55), rgba(15,22,51,0.86)); }
 }
 .band-dark .card, .band-deep .card {
