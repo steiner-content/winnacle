@@ -1213,3 +1213,71 @@ p { margin: 0 0 14px; }
   .topnav li a.is-current { border-bottom: 0; color: var(--ww-gold); }
   .page--dark .topnav ul { border-top-color: rgba(226,200,146,0.18); }
 }
+
+/* ============================================================
+   Responsive — tablet & mobile (added in the mobile QA pass)
+   ============================================================ */
+
+/* Tablet / small laptop: drop 3- and 4-up grids to two columns,
+   ease section + footer padding. */
+@media (max-width: 900px) {
+  section.sec { padding: 80px 32px; }
+  section.sec.tight { padding: 64px 32px; }
+  .cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .partner-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot { padding: 56px 32px 32px; }
+  .foot .wrap { grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+}
+
+/* Phone: single-column everything, tighter padding, full-width CTAs. */
+@media (max-width: 680px) {
+  section.sec { padding: 60px 22px; }
+  section.sec.tight { padding: 48px 22px; }
+
+  /* Hero is a <header>, not section.sec — give it the same mobile padding */
+  .hero-split { padding: 56px 22px 64px; }
+
+  /* Grid/flex items default to min-width:auto and refuse to shrink,
+     which forces horizontal overflow. Let them shrink. */
+  .hero-split-inner > *,
+  .cols-2 > *, .cols-3 > *, .cols-4 > *,
+  .cols-hero > *, .cols-2-flip > * { min-width: 0; }
+
+  /* Every multi-column layout stacks */
+  .cols-2, .cols-3, .cols-4,
+  .cols-hero, .cols-2-flip { grid-template-columns: 1fr; }
+  .cols-2 { gap: 32px; }
+
+  /* Inline image+text feature grids and the newsletter row stack */
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  /* Stats become a 2x2 block */
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 22px 24px; }
+  .stat .n { font-size: clamp(34px, 12vw, 48px); }
+
+  /* Event rows stack: date, then title, then button */
+  .event-row { grid-template-columns: 1fr; gap: 10px; align-items: start; }
+
+  /* Footer collapses to one column */
+  .foot { padding: 48px 22px 28px; }
+  .foot .wrap { grid-template-columns: 1fr; gap: 32px; }
+
+  /* Calendly embeds must not force horizontal overflow */
+  .calendly-inline-widget { min-width: 0 !important; width: 100%; }
+
+  /* Buttons go full-width for easy tapping (except inline nav/link styles) */
+  .hero-actions { gap: 12px; width: 100%; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  /* Headings ease down so long lines don't overflow */
+  h1, .h1 { font-size: clamp(32px, 8.5vw, 44px); }
+  h2, .h2 { font-size: clamp(26px, 7vw, 36px); }
+}
+
+/* Small phones: collapse the team grid too, trim padding further. */
+@media (max-width: 480px) {
+  section.sec { padding: 52px 18px; }
+  .team-grid, .partner-grid { grid-template-columns: 1fr; }
+}
