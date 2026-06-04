@@ -285,6 +285,21 @@ p { margin: 0 0 14px; }
 .card--flat { /* legacy, no-op */ }
 .card--cream { background: var(--ww-cream); }
 .card--inset { padding: 24px; }
+
+/* Guide cards with PDF cover previews */
+.guide-card { display: flex; flex-direction: column; }
+.guide-cover {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--ww-navy-50);
+  border: 1px solid var(--border-soft);
+  margin-bottom: 22px;
+}
+.guide-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.guide-card h4 { margin: 0 0 10px; }
+.guide-card .body-sm { margin: 0 0 4px; }
+.guide-card .btn-link { margin-top: auto; padding-top: 18px; }
 .band-dark .card, .band-deep .card {
   background: rgba(251,247,238,0.06);
   border-color: rgba(226,200,146,0.18);
