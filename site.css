@@ -320,6 +320,10 @@ p { margin: 0 0 14px; }
 /* Taller variant for page heroes */
 .photo-band--tall { min-height: 540px; }
 .photo-band h1 { color: var(--ww-cream); }
+/* Stats overlaid on a photo band read light */
+.photo-band .stats { border-color: rgba(226,200,146,0.28); }
+.photo-band .stat .n { color: var(--ww-cream); }
+.photo-band .stat .l { color: rgba(251,247,238,0.82); }
 @media (max-width: 680px) {
   .photo-band { min-height: 400px; }
   .photo-band--tall { min-height: 460px; }
