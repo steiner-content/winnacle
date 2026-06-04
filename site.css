@@ -54,7 +54,7 @@ body {
   text-decoration: none; border: 1px solid transparent;
   transition: all var(--dur-base) var(--ease-standard);
 }
-.topnav .nav-cta:hover { background: var(--__navy-lift); color: var(--ww-cream); border-color: var(--ww-gold); }
+.topnav .nav-cta:hover { background: var(--ww-gold); color: var(--ww-navy-deep); border-color: var(--ww-gold); }
 
 /* On dark pages, invert nav lightly */
 .page--dark .topnav { background: rgba(15,22,51,0.88); border-bottom-color: rgba(226,200,146,0.14); }
