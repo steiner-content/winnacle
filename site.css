@@ -778,8 +778,8 @@ p { margin: 0 0 14px; }
   font-family: var(--ff-display);
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(26px, 2.4vw, 34px);
-  line-height: 1.22;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.2;
   color: var(--ww-navy-deep);
   letter-spacing: -0.005em;
   margin: 0;
