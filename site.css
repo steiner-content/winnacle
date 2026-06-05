@@ -284,6 +284,7 @@ p { margin: 0 0 14px; }
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 28px;
+  box-shadow: var(--shadow-2);
 }
 .card--flat { /* legacy, no-op */ }
 .card--cream { background: var(--ww-cream); }
@@ -296,7 +297,8 @@ p { margin: 0 0 14px; }
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--ww-navy-50);
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(28, 42, 94, 0.16);
+  box-shadow: var(--shadow-1);
   margin-bottom: 22px;
 }
 .guide-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
@@ -335,6 +337,7 @@ p { margin: 0 0 14px; }
 .band-dark .card, .band-deep .card {
   background: rgba(251,247,238,0.06);
   border-color: rgba(226,200,146,0.18);
+  box-shadow: none;
 }
 
 .tile {
