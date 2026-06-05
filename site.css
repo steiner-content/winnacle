@@ -340,6 +340,22 @@ p { margin: 0 0 14px; }
   box-shadow: none;
 }
 
+/* Clickable guide cards — the whole card triggers its download link */
+.card { position: relative; }
+.card a[href$=".pdf"]::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.card:has(a[href$=".pdf"]) {
+  cursor: pointer;
+  transition:
+    transform var(--dur-base) var(--ease-standard),
+    box-shadow var(--dur-base) var(--ease-standard),
+    border-color var(--dur-base) var(--ease-standard);
+}
+.card:has(a[href$=".pdf"]):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-3);
+  border-color: var(--ww-gold);
+}
+
 .tile {
   padding: 28px 0;
 }
