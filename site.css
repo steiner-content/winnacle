@@ -302,13 +302,13 @@ p { margin: 0 0 14px; }
 .guide-card .btn-link { margin-top: auto; padding-top: 18px; }
 
 /* Full-bleed photo band with text overlay (Waco landmark imagery) */
-.photo-band { position: relative; display: grid; align-items: center; overflow: hidden; min-height: 460px; }
+.photo-band { position: relative; display: grid; grid-template-columns: 1fr; align-items: center; overflow: hidden; min-height: 460px; }
 .photo-band > .photo-band-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .photo-band > .photo-band-scrim {
   position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(15,22,51,0.85) 0%, rgba(15,22,51,0.55) 48%, rgba(15,22,51,0.15) 100%);
 }
-.photo-band .wrap { position: relative; z-index: 1; }
+.photo-band .wrap { position: relative; z-index: 1; width: 100%; }
 .photo-band h2, .photo-band h1 { color: var(--ww-cream); }
 .photo-band .lede, .photo-band p { color: rgba(251,247,238,0.92); }
 .photo-band .photo-stamp {
