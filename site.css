@@ -96,26 +96,29 @@ section.sec.band-deep {
   .reveal-sec > .wrap > *,
   .reveal-sec > .wrap-narrow > * {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(14px);
+    will-change: opacity, transform;
+    /* gentle ease-out (easeOutQuint) — smooth deceleration, slow tail */
     transition:
-      opacity var(--dur-slow) var(--ease-emphasized),
-      transform var(--dur-slow) var(--ease-emphasized);
+      opacity 820ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 820ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal-sec.is-visible > .wrap > *,
   .reveal-sec.is-visible > .wrap-narrow > * {
     opacity: 1;
     transform: none;
   }
+  /* small, overlapping stagger so blocks flow in rather than step */
   .reveal-sec.is-visible > .wrap > *:nth-child(2),
-  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(2) { transition-delay: 70ms; }
+  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(2) { transition-delay: 60ms; }
   .reveal-sec.is-visible > .wrap > *:nth-child(3),
-  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(3) { transition-delay: 140ms; }
+  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(3) { transition-delay: 120ms; }
   .reveal-sec.is-visible > .wrap > *:nth-child(4),
-  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(4) { transition-delay: 210ms; }
+  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(4) { transition-delay: 180ms; }
   .reveal-sec.is-visible > .wrap > *:nth-child(5),
-  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(5) { transition-delay: 280ms; }
+  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(5) { transition-delay: 240ms; }
   .reveal-sec.is-visible > .wrap > *:nth-child(n+6),
-  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(n+6) { transition-delay: 350ms; }
+  .reveal-sec.is-visible > .wrap-narrow > *:nth-child(n+6) { transition-delay: 300ms; }
 }
 
 /* ============================================================
