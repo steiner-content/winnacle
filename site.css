@@ -201,7 +201,7 @@ p { margin: 0 0 14px; }
   font: 400 14px var(--ff-body);
   color: var(--fg2);
   letter-spacing: 0.02em;
-  font-style: italic;
+  font-style: normal;
 }
 .band-dark .attrib, .band-deep .attrib { color: rgba(251,247,238,0.7); }
 
@@ -609,7 +609,7 @@ p { margin: 0 0 14px; }
 }
 .founders-card .founders-quote {
   font-family: var(--ff-display);
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(20px, 1.6vw, 24px);
   line-height: 1.35;
   color: var(--ww-navy-deep);
@@ -666,7 +666,7 @@ p { margin: 0 0 14px; }
 }
 .editorial-quote blockquote {
   font-family: var(--ff-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   font-size: clamp(28px, 2.6vw, 40px);
   line-height: 1.2;
@@ -701,7 +701,7 @@ p { margin: 0 0 14px; }
 }
 .editorial-quote--solo blockquote {
   font-family: var(--ff-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
   font-size: clamp(32px, 3.6vw, 52px);
   line-height: 1.18;
@@ -809,7 +809,7 @@ p { margin: 0 0 14px; }
 .brand-quote-block .brand-quote {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(30px, 3.2vw, 46px);
   line-height: 1.2;
   color: var(--ww-navy-deep);
@@ -1061,7 +1061,7 @@ p { margin: 0 0 14px; }
 .foot-tagline {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   font-size: clamp(26px, 2.4vw, 36px);
   line-height: 1.2;
   color: var(--__gold-glint);
