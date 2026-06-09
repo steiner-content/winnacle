@@ -1355,8 +1355,9 @@ p { margin: 0 0 14px; }
    Lighter/warmer bands + sparing gold accents. Scoped so only
    the JustHer page is affected.
    ============================================================ */
+body.page--justher { background: var(--ww-white); }
 .page--justher .hero-split { background: #fff; }
-.page--justher section.sec.band-tint { background: #FBF9F4; border-top: 1px solid rgba(201,168,106,0.22); }
+.page--justher section.sec.band-tint { background: #FBFAF7; border-top: 1px solid rgba(201,168,106,0.20); }
 .page--justher .eyebrow { font: 600 12px/1 var(--ff-body); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ww-gold); display: block; margin-bottom: 16px; }
 .page--justher .icon-circle { background: var(--ww-gold-50); border: 1px solid rgba(201,168,106,0.45); }
 .page--justher .icon-circle svg { color: var(--ww-navy); }
