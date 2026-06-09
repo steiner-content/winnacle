@@ -239,6 +239,9 @@ p { margin: 0 0 14px; }
 /* On dark bands a navy fill blends into the navy background — give navy buttons
    a visible gold edge by default so they read as buttons before hover. */
 .band-dark .btn--navy, .band-deep .btn--navy { border-color: var(--ww-gold); }
+/* Equal-height cards whose action buttons bottom-align onto the same line */
+.cards-align .card { display: flex; flex-direction: column; }
+.cards-align .card > .btn { margin-top: auto; }
 .btn--gold { background: var(--ww-gold); color: var(--ww-navy-deep); }
 .btn--gold:hover { background: var(--__gold-glint); color: var(--ww-navy-deep); border-color: var(--ww-navy-deep); }
 .btn--cream { background: var(--ww-cream); color: var(--ww-navy-deep); }
