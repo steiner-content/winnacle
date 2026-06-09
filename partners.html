@@ -11,9 +11,10 @@
 <meta property="og:description" content="The CPAs, estate attorneys, and specialists Winnacle Wealth coordinates with so your plan moves cleanly across every desk." />
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preload" href="fonts/Karla-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="fonts/DMSerifDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="stylesheet" href="colors_and_type.css" />
 <link rel="stylesheet" href="site.css" />
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="site.js" defer></script>
 </head>
 <body>
@@ -54,7 +55,7 @@
 
   <!-- 01 Hero -->
   <section class="sec photo-band photo-band--tall">
-    <img class="photo-band-bg" src="assets/waco-bridge-lighted.jpg" alt="The pedestrian bridge lit blue in front of McLane Stadium in Waco at dusk" />
+    <img fetchpriority="high" class="photo-band-bg" src="assets/waco-bridge-lighted.jpg" alt="The pedestrian bridge lit blue in front of McLane Stadium in Waco at dusk" />
     <div class="photo-band-scrim"></div>
     <div class="wrap">
       <h1>Great Plans Take a Team.<br />We Curate Yours.</h1>
@@ -75,16 +76,16 @@
           <p class="lede">A custodian is the independent institution that actually holds your money — safeguarding your accounts, settling trades, and handling the movement of funds. Winnacle never takes custody of your assets. We direct the strategy; the custodian holds the assets. That separation is a core protection for you.</p>
           <p>We custody client accounts with <strong>Altruist</strong>, a modern, independent custodian built for fiduciary advisors and the families they serve.</p>
           <ul style="list-style:none; padding:0; margin:20px 0 0; display:flex; flex-direction:column; gap:12px;">
-            <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"></i>A clean mobile app to see every account, balance, and transaction — anytime, 24/7.</li>
-            <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"></i>Independent, regulated custody with FDIC-coverage through partner banks and SIPC protection.</li>
-            <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"></i>Far less paperwork than legacy custodians — digital onboarding, e-signatures, and fast transfers.</li>
-            <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"></i>Built-in tax-management features to help you keep more of what you earn.</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"><path d="M20 6 9 17l-5-5" /></svg>A clean mobile app to see every account, balance, and transaction — anytime, 24/7.</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"><path d="M20 6 9 17l-5-5" /></svg>Independent, regulated custody with FDIC-coverage through partner banks and SIPC protection.</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"><path d="M20 6 9 17l-5-5" /></svg>Far less paperwork than legacy custodians — digital onboarding, e-signatures, and fast transfers.</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:10px;"><path d="M20 6 9 17l-5-5" /></svg>Built-in tax-management features to help you keep more of what you earn.</li>
           </ul>
           <div class="hero-actions" style="margin-top: 28px;">
             <a href="https://altruist.com/strength-stability-and-protection/" target="_blank" rel="noopener" class="btn btn--ghost">About Altruist <span class="arrow">→</span></a>
           </div>
         </div>
-        <div class="photo" style="aspect-ratio: 16/9;"><img src="assets/altruist-app.jpg" alt="The Altruist client app showing account balance, activity, gains and allocations" /></div>
+        <div class="photo" style="aspect-ratio: 16/9;"><img loading="lazy" src="assets/altruist-app.jpg" alt="The Altruist client app showing account balance, activity, gains and allocations" /></div>
       </div>
     </div>
   </section>
@@ -169,7 +170,7 @@
     <div class="foot-tagline">Elevating What Matters. Simplifying the Rest.<sup class="tm">™</sup></div>
     <div class="wrap">
       <div>
-        <img src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
+        <img loading="lazy" src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
         <p class="mt-16">Independent Registered Investment Advisor based in Waco, Texas.</p>
         <p>200 W State Hwy 6, Suite 330<br />Waco, TX 76712 · (254) 776-8400</p>
       </div>

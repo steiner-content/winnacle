@@ -11,9 +11,10 @@
 <meta property="og:description" content="A short, no-pressure conversation to figure out whether Winnacle Wealth is the right place for the work you're trying to do. No pitch." />
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preload" href="fonts/Karla-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="fonts/DMSerifDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="stylesheet" href="colors_and_type.css" />
 <link rel="stylesheet" href="site.css" />
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="site.js" defer></script>
 </head>
 <body>
@@ -54,7 +55,7 @@
 
   <!-- 01 Hero -->
   <section class="sec photo-band photo-band--tall">
-    <img class="photo-band-bg" src="assets/waco-bridge-night.jpg" alt="The Waco Suspension Bridge lit at night" />
+    <img fetchpriority="high" class="photo-band-bg" src="assets/waco-bridge-night.jpg" alt="The Waco Suspension Bridge lit at night" />
     <div class="photo-band-scrim"></div>
     <div class="wrap">
       <h1>Find Out What Working Together Looks Like.</h1>
@@ -75,11 +76,11 @@
             <h3>A Short, Exploratory Conversation.</h3>
             <hr class="rule-gold rule-gold--sm" />
             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
-              <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>You describe what you're working through.</li>
-              <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>We ask questions. Mostly to understand the situation.</li>
-              <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>We tell you, plainly, whether this is something we can help with.</li>
-              <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>If yes, we walk through how we work — our style, our fees, and the next steps.</li>
-              <li><i data-lucide="check" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>If no, we point you to a better-fit resource.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M20 6 9 17l-5-5" /></svg>You describe what you're working through.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M20 6 9 17l-5-5" /></svg>We ask questions. Mostly to understand the situation.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M20 6 9 17l-5-5" /></svg>We tell you, plainly, whether this is something we can help with.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M20 6 9 17l-5-5" /></svg>If yes, we walk through how we work — our style, our fees, and the next steps.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon icon--gold" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M20 6 9 17l-5-5" /></svg>If no, we point you to a better-fit resource.</li>
             </ul>
           </div>
 
@@ -88,11 +89,11 @@
             <h3>Not a Pitch, a Sales Call, or a Commitment.</h3>
             <hr class="rule-gold rule-gold--sm" />
             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
-              <li><i data-lucide="x" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>We won't recommend an investment.</li>
-              <li><i data-lucide="x" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>We won't ask you to bring documents or numbers.</li>
-              <li><i data-lucide="x" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>We won't ask for credit card or bank info.</li>
-              <li><i data-lucide="x" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>You're not signing up for anything by booking.</li>
-              <li><i data-lucide="x" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"></i>No follow-up pressure if you decide not to engage.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>We won't recommend an investment.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>We won't ask you to bring documents or numbers.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>We won't ask for credit card or bank info.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>You're not signing up for anything by booking.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon" style="display:inline-block; vertical-align:middle; margin-right:8px;"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>No follow-up pressure if you decide not to engage.</li>
             </ul>
           </div>
         </div>
@@ -175,7 +176,7 @@
     <div class="foot-tagline">Elevating What Matters. Simplifying the Rest.<sup class="tm">™</sup></div>
     <div class="wrap">
       <div>
-        <img src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
+        <img loading="lazy" src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
         <p class="mt-16">Independent Registered Investment Advisor based in Waco, Texas.</p>
         <p>200 W State Hwy 6, Suite 330<br />Waco, TX 76712 · (254) 776-8400</p>
       </div>

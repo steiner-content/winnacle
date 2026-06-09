@@ -11,9 +11,10 @@
 <meta property="og:description" content="Plain-English guides, household maps, articles, and calculators from Winnacle Wealth." />
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preload" href="fonts/Karla-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="fonts/DMSerifDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="stylesheet" href="colors_and_type.css" />
 <link rel="stylesheet" href="site.css" />
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="site.js" defer></script>
 </head>
 <body>
@@ -54,7 +55,7 @@
 
   <!-- 01 Hero -->
   <section class="sec photo-band photo-band--tall">
-    <img class="photo-band-bg" src="assets/waco-silos.jpg" alt="Magnolia Market at the Silos in downtown Waco at twilight" />
+    <img fetchpriority="high" class="photo-band-bg" src="assets/waco-silos.jpg" alt="Magnolia Market at the Silos in downtown Waco at twilight" />
     <div class="photo-band-scrim"></div>
     <div class="wrap">
       <h1>Explore Our Library of Resources.</h1>
@@ -236,7 +237,7 @@
     <div class="foot-tagline">Elevating What Matters. Simplifying the Rest.<sup class="tm">™</sup></div>
     <div class="wrap">
       <div>
-        <img src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
+        <img loading="lazy" src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
         <p class="mt-16">Independent Registered Investment Advisor based in Waco, Texas.</p>
         <p>200 W State Hwy 6, Suite 330<br />Waco, TX 76712 · (254) 776-8400</p>
       </div>

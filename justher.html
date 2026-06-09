@@ -11,9 +11,10 @@
 <meta property="og:description" content="JustHer®, a practice of Winnacle Wealth, is financial planning built around the transition itself — divorce, widowhood, career change." />
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="preload" href="fonts/Karla-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+<link rel="preload" href="fonts/DMSerifDisplay-Regular.ttf" as="font" type="font/ttf" crossorigin />
 <link rel="stylesheet" href="colors_and_type.css" />
 <link rel="stylesheet" href="site.css" />
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 <script src="site.js" defer></script>
 </head>
 <body class="page--dark page--justher">
@@ -54,10 +55,10 @@
 
   <!-- 01 Hero — white-studio JustHer signature -->
   <header class="hero-split hero-split--justher">
-    <div class="crest-watermark"><img src="assets/crest-navy-gold.png" alt="" /></div>
+    <div class="crest-watermark"><img fetchpriority="high" src="assets/crest-navy-gold.webp" alt="" /></div>
     <div class="hero-split-inner">
       <div class="hero-split-photo">
-        <img src="assets/photo-jessica-white-dress.jpg" alt="Jessica Burch, CFP" />
+        <img loading="lazy" src="assets/photo-jessica-white-dress.jpg" alt="Jessica Burch, CFP" />
         <div class="photo-stamp">Jessica Burch, MBA, CFP<sup class="tm">®</sup> · Founder</div>
       </div>
       <div class="hero-split-copy">
@@ -81,17 +82,17 @@
 
       <div class="cols-3 mt-48">
         <div class="tile">
-          <div class="icon-circle"><i data-lucide="split"></i></div>
+          <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5" /> <path d="M8 3H3v5" /> <path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3" /> <path d="m15 9 6-6" /></svg></div>
           <h4>After Divorce</h4>
           <p>New balance sheet, new tax picture, new beneficiary designations. We rebuild the plan from scratch, at your pace.</p>
         </div>
         <div class="tile">
-          <div class="icon-circle"><i data-lucide="feather"></i></div>
+          <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z" /> <path d="M16 8 2 22" /> <path d="M17.5 15H9" /></svg></div>
           <h4>After Loss</h4>
           <p>Survivor benefits, estate settlement, the inheritance that lands without a manual. Patient work, made easy to understand.</p>
         </div>
         <div class="tile">
-          <div class="icon-circle"><i data-lucide="key-round"></i></div>
+          <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" /> <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" /></svg></div>
           <h4>Taking the Reins</h4>
           <p>Career change, taking over from a partner, sudden wealth from a sale. The first plan that's fully yours.</p>
         </div>
@@ -116,7 +117,7 @@
           <p class="body-sm">CFP<sup class="tm">®</sup> · MBA · Life, Accident &amp; Health licensed across multiple states · Co-founder, Winnacle Wealth<sup class="tm">™</sup>.</p>
         </div>
         <div class="photo photo--full" style="aspect-ratio: 4/5;">
-          <img src="assets/photo-jessica-laptop-couch.jpg" alt="Jessica Burch working with clients" />
+          <img loading="lazy" src="assets/photo-jessica-laptop-couch.jpg" alt="Jessica Burch working with clients" />
         </div>
       </div>
     </div>
@@ -256,7 +257,7 @@
     <div class="foot-tagline">Elevating What Matters. Simplifying the Rest.<sup class="tm">™</sup></div>
     <div class="wrap">
       <div>
-        <img src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
+        <img loading="lazy" src="assets/logo-horz-white-gold.png" alt="Winnacle Wealth" />
         <p class="mt-16">JustHer<sup class="tm">®</sup> is a practice of Winnacle Wealth<sup class="tm">™</sup>, LLC.</p>
         <p>200 W State Hwy 6, Suite 330<br />Waco, TX 76712 · (254) 776-8400</p>
       </div>

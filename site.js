@@ -1,6 +1,6 @@
 /* ============================================================
    Winnacle Wealth — site behavior
-   Loaded with `defer` on every page (after the Lucide UMD bundle).
+   Loaded with `defer` on every page.
    Progressive enhancement only: every page is fully usable
    without JavaScript.
    ============================================================ */
@@ -17,7 +17,7 @@
     btn.type = "button";
     btn.setAttribute("aria-label", "Toggle menu");
     btn.setAttribute("aria-expanded", "false");
-    btn.innerHTML = '<i data-lucide="menu"></i>';
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg>';
 
     var brand = inner.querySelector("a");
     if (brand) brand.insertAdjacentElement("afterend", btn);
@@ -26,8 +26,7 @@
     btn.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
       btn.setAttribute("aria-expanded", open ? "true" : "false");
-      btn.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
-      if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+      btn.innerHTML = open ? '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg>';
     });
 
     // Close the menu after tapping a link on mobile
@@ -35,8 +34,7 @@
       a.addEventListener("click", function () {
         nav.classList.remove("is-open");
         btn.setAttribute("aria-expanded", "false");
-        btn.innerHTML = '<i data-lucide="menu"></i>';
-        if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg>';
       });
     });
   });
@@ -105,5 +103,4 @@
   })();
 
   /* ---- Lucide icons --------------------------------------- */
-  if (window.lucide) window.lucide.createIcons({ attrs: { "stroke-width": 1.5 } });
 })();

@@ -5,6 +5,7 @@
 
 /* -------- Fonts (local + Google fallback) ---------------- */
 @font-face {
+  font-display: swap;
   font-family: "Karla";
   src: url("./fonts/Karla-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 200 800;
@@ -12,6 +13,7 @@
   font-display: swap;
 }
 @font-face {
+  font-display: swap;
   font-family: "Karla";
   src: url("./fonts/Karla-Italic-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 200 800;
@@ -24,6 +26,7 @@
    for the rare moments a real italic is called for (pull quotes only).
    Italic is NOT used inside headlines. */
 @font-face {
+  font-display: swap;
   font-family: "DM Serif Display";
   src: url("./fonts/DMSerifDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -31,6 +34,7 @@
   font-display: swap;
 }
 @font-face {
+  font-display: swap;
   font-family: "DM Serif Display";
   src: url("./fonts/DMSerifDisplay-Italic.ttf") format("truetype");
   font-weight: 400;
