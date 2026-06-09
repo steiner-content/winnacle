@@ -1348,3 +1348,16 @@ p { margin: 0 0 14px; }
   section.sec { padding: 52px 18px; }
   .team-grid, .partner-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   JustHer — "Middle Ground" treatment  (body.page--justher)
+   Lighter/warmer bands + sparing gold accents. Scoped so only
+   the JustHer page is affected.
+   ============================================================ */
+.page--justher .hero-split { background: #fff; }
+.page--justher section.sec.band-tint { background: #FBF9F4; border-top: 1px solid rgba(201,168,106,0.22); }
+.page--justher .eyebrow { font: 600 12px/1 var(--ff-body); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ww-gold); display: block; margin-bottom: 16px; }
+.page--justher .icon-circle { background: var(--ww-gold-50); border: 1px solid rgba(201,168,106,0.45); }
+.page--justher .icon-circle svg { color: var(--ww-navy); }
+.page--justher .card { box-shadow: 0 6px 18px rgba(15,22,51,0.07); }
