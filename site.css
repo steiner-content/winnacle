@@ -392,6 +392,10 @@ p { margin: 0 0 14px; }
   box-shadow: var(--shadow-3);
 }
 .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Image column that stretches to its adjacent card's height (bottoms align);
+   restores an intrinsic ratio once the row stacks on mobile so it can't collapse. */
+.photo--fill { align-self: stretch; }
+@media (max-width: 680px) { .photo--fill { aspect-ratio: 4 / 3; } }
 .photo--duotone img { filter: url("#ww-duotone-navy"); }
 .photo--hero {
   position: absolute; inset: 0;
