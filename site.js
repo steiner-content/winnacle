@@ -102,5 +102,54 @@
     });
   })();
 
+  /* ---- Team bio modals ------------------------------------ */
+  // Cards carry the brief summary; the full biography lives in a
+  // native <dialog>. Progressive enhancement: without JS the button
+  // simply does nothing and the brief summary still tells the story.
+  (function () {
+    var toggles = document.querySelectorAll(".team-bio-toggle");
+    if (!toggles.length) return;
+
+    var supportsModal =
+      typeof HTMLDialogElement === "function" &&
+      typeof HTMLDialogElement.prototype.showModal === "function";
+
+    toggles.forEach(function (btn) {
+      var id = btn.getAttribute("data-bio");
+      var dialog = id && document.getElementById(id);
+      if (!dialog) return;
+
+      // No native <dialog> support: fall back to revealing the panel
+      // inline rather than leaving a dead button.
+      if (!supportsModal) {
+        btn.addEventListener("click", function () {
+          dialog.setAttribute("open", "");
+          dialog.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        var fallbackClose = dialog.querySelector(".bio-modal-close");
+        if (fallbackClose) {
+          fallbackClose.addEventListener("click", function () {
+            dialog.removeAttribute("open");
+          });
+        }
+        return;
+      }
+
+      btn.addEventListener("click", function () {
+        dialog.showModal();
+      });
+
+      var closeBtn = dialog.querySelector(".bio-modal-close");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () { dialog.close(); });
+      }
+
+      // Click on the backdrop (outside the inner panel) closes the modal.
+      dialog.addEventListener("click", function (e) {
+        if (e.target === dialog) dialog.close();
+      });
+    });
+  })();
+
   /* ---- Lucide icons --------------------------------------- */
 })();
