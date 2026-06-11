@@ -257,6 +257,18 @@ p { margin: 0 0 14px; }
 }
 .btn--ghost-light:hover { background: rgba(226,200,146,0.1); color: var(--ww-cream); border-color: var(--__gold-glint); }
 .btn--full { width: 100%; justify-content: center; }
+/* Registration-not-yet-open notice. Class registration goes live 4 weeks
+   before each session, so this reads as a status pill, not a button:
+   muted fill, dashed gold edge, and no pointer interaction. */
+.btn--soon {
+  background: var(--ww-gold-50);
+  color: var(--fg2);
+  border: 1px dashed var(--ww-gold);
+  cursor: default;
+  pointer-events: none;
+  text-align: left;
+}
+.btn--soon .clock { flex: 0 0 auto; opacity: 0.9; }
 .btn-link {
   display: inline-flex; align-items: center; gap: 6px;
   font: 600 14px var(--ff-body);
