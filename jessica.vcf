@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Burch;Jessica;;;
+FN:Jessica Burch
+ORG:Winnacle Wealth
+TITLE:Co-Founder, MBA, CFP
+TEL;TYPE=WORK,VOICE:+12547768400
+EMAIL;TYPE=WORK:jessica@winnaclewealth.com
+ADR;TYPE=WORK:;;200 W State Hwy 6 Suite 330;Waco;TX;76712;USA
+URL:https://winnaclewealth.com/jessica
+END:VCARD
