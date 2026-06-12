@@ -1542,6 +1542,24 @@ body.page--justher { background: var(--ww-white); }
 .vcard-link--gold:hover { background: var(--ww-gold-100); border-color: var(--ww-navy-deep); }
 .vcard-section-label { font: 700 11px var(--ff-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); text-align: left; margin: 22px 0 10px; }
 
+/* About / bio prose */
+.vcard-bio { text-align: left; }
+.vcard-bio p { font-size: 13.5px; line-height: 1.65; color: var(--fg2); margin: 0 0 12px; }
+.vcard-bio p:last-child { margin-bottom: 0; }
+
+/* Sub-brand callout (e.g. JustHer) */
+.vcard-callout {
+  text-align: left;
+  margin-top: 16px;
+  padding: 16px 18px;
+  background: var(--ww-gold-50);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--ww-gold);
+  border-radius: var(--radius-md);
+}
+.vcard-callout-title { font-family: var(--ff-display); font-size: 17px; color: var(--ww-navy); margin: 0 0 6px; }
+.vcard-callout p { font-size: 13px; line-height: 1.6; color: var(--fg2); margin: 0; }
+
 /* Social */
 .vcard-social { display: flex; justify-content: center; gap: 14px; margin-top: 24px; }
 .vcard-social a {
