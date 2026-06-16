@@ -25,8 +25,14 @@
   /* Hero: a touch taller on desktop for breathing room; the brand's shorter mobile height applies below 681px */
   @media (min-width: 681px) { .photo-band--tall { min-height: 640px; } }
 
-  /* Hero trust line: centered on mobile only (left-aligned under the buttons on desktop) */
-  @media (max-width: 680px) { .hero-trustline { text-align: center; } }
+  /* Mobile-only hero + spacing tweaks */
+  @media (max-width: 680px) {
+    .hero-trustline { text-align: center; }
+    section.sec.photo-band--tall { padding-top: 88px; }
+    .wrap h3.mt-48 { margin-top: 28px; }
+    .wrap h3.mt-48 + .cols-3,
+    .wrap h3.mt-48 + .lede { margin-top: 14px; }
+  }
 
   /* Guide download popup (subtle, bottom-right, dismissible) */
   .guide-pop {
@@ -93,7 +99,7 @@
 
   <!-- Utility bar (new element, a candidate to reuse on the main site, where it links here) -->
   <!-- href points to the published path /spacex; on this page it self-links (harmless). Local preview will 404 until published as spacex.html. -->
-  <a class="util-bar" href="spacex">For SpaceX Employees in Central Texas &nbsp;·&nbsp; <b>Financial planning during the lock up window</b></a>
+  <a class="util-bar" href="spacex">For SpaceX Employees in Central Texas<span class="util-bar-sep"> &nbsp;·&nbsp; </span><b>Financial planning during the lock up window</b></a>
 
   <!-- ── Nav ── -->
   <nav class="topnav">
@@ -361,14 +367,26 @@
   </aside>
 
   <script>
-    /* Guide popup: slides in after a short delay on every page load; dismiss just hides it for the current view. */
+    /* Guide popup: desktop shows after a short delay; mobile shows after a bit of scrolling.
+       Fires once per page load; dismiss just hides it for the current view. */
     (function () {
       var pop = document.getElementById('guidePop');
       if (!pop) return;
-      setTimeout(function () {
+      var shown = false;
+      function show() {
+        if (shown) return;
+        shown = true;
         pop.hidden = false;
         requestAnimationFrame(function () { pop.classList.add('is-visible'); });
-      }, 2000);
+      }
+      if (window.matchMedia('(max-width: 680px)').matches) {
+        var onScroll = function () {
+          if (window.scrollY > 500) { show(); window.removeEventListener('scroll', onScroll); }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+      } else {
+        setTimeout(show, 2000);
+      }
       document.getElementById('guidePopClose').addEventListener('click', function () {
         pop.classList.remove('is-visible');
         setTimeout(function () { pop.hidden = true; }, 260);

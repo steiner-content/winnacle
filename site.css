@@ -36,6 +36,11 @@ body {
 }
 .util-bar:hover { filter: brightness(1.05); color: var(--ww-navy-deep); border: 0; }
 .util-bar b { color: var(--ww-navy-deep); font-weight: var(--fw-strong); }
+/* Mobile: drop the bold phrase to its own line and hide the separator */
+@media (max-width: 680px) {
+  .util-bar .util-bar-sep { display: none; }
+  .util-bar b { display: block; }
+}
 
 .topnav {
   position: sticky; top: 0; z-index: 30;
