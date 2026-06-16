@@ -27,8 +27,12 @@
 
   /* Mobile-only hero + spacing tweaks */
   @media (max-width: 680px) {
-    .hero-trustline { text-align: center; }
-    section.sec.photo-band--tall { padding-top: 88px; }
+    /* Hero: more air so the text-over-photo doesn't feel cramped */
+    section.sec.photo-band--tall { padding-top: 104px; padding-bottom: 84px; }
+    .photo-band .rule-gold { margin: 28px 0 30px; }
+    .photo-band .hero-actions { margin-top: 36px; gap: 12px; }
+    .hero-trustline { text-align: center; margin-top: 30px; }
+    /* Tighten the airy subhead gaps elsewhere on the page */
     .wrap h3.mt-48 { margin-top: 28px; }
     .wrap h3.mt-48 + .cols-3,
     .wrap h3.mt-48 + .lede { margin-top: 14px; }
