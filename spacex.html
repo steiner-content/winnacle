@@ -25,12 +25,14 @@
      custom CSS. What remains here: a small mobile spacing tweak and the guide popup. ── */
 
   @media (max-width: 680px) {
-    /* Tighten the airy subhead gaps (What You Can Expect / What to Decide) */
+    /* Tighten the airy subhead gaps */
     .wrap h3.mt-48 { margin-top: 28px; }
     .wrap h3.mt-48 + .cols-3,
     .wrap h3.mt-48 + .lede { margin-top: 14px; }
-    /* Advisor photos: cap so a stacked portrait doesn't fill the screen */
-    .tile .photo { max-width: 280px; margin-left: auto; margin-right: auto; }
+    /* Advisor cards: cap the whole tile so the photo and the text below it share one width and line up */
+    .tile { max-width: 280px; margin-left: auto; margin-right: auto; }
+    /* All buttons full-width, matching the hero buttons */
+    .btn { width: 100%; justify-content: center; }
   }
 
   /* Guide download popup (subtle, bottom-right, dismissible) */
