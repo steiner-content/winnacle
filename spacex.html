@@ -19,20 +19,13 @@
 <script src="site.js" defer></script>
 <style>
   /* ── Page-scoped extras for the SpaceX landing page.
-     The banner (.util-bar) now lives in site.css for site-wide reuse.
-     What remains here: a hero height/trust-line tweak and the guide popup. ── */
+     The hero now mirrors the brand photo-band heroes (partners/right-fit) with no
+     custom CSS. The banner (.util-bar) lives in site.css. What remains here: two
+     small mobile spacing tweaks and the guide popup. ── */
 
-  /* Hero: a touch taller on desktop for breathing room; the brand's shorter mobile height applies below 681px */
-  @media (min-width: 681px) { .photo-band--tall { min-height: 640px; } }
-
-  /* Mobile-only hero + spacing tweaks */
   @media (max-width: 680px) {
-    /* Hero: more air so the text-over-photo doesn't feel cramped */
-    section.sec.photo-band--tall { padding-top: 104px; padding-bottom: 84px; }
-    .photo-band .rule-gold { margin: 28px 0 30px; }
-    .photo-band .hero-actions { margin-top: 36px; gap: 12px; }
-    .hero-trustline { text-align: center; margin-top: 30px; }
-    /* Tighten the airy subhead gaps elsewhere on the page */
+    .hero-trustline { text-align: center; }
+    /* Tighten the airy subhead gaps (What You Can Expect / What to Decide) */
     .wrap h3.mt-48 { margin-top: 28px; }
     .wrap h3.mt-48 + .cols-3,
     .wrap h3.mt-48 + .lede { margin-top: 14px; }
@@ -126,9 +119,9 @@
     <img fetchpriority="high" class="photo-band-bg" src="assets/spacex.jpg" alt="A SpaceX rocket arcing into the night sky over the coast" style="transform: scaleX(-1);" />
     <div class="photo-band-scrim"></div>
     <div class="wrap">
-      <h1 style="max-width: 760px;">Your SpaceX Equity Is Public Now. There's Work to Be Done Before Mid December.</h1>
+      <h1>Your SpaceX Equity Is Public Now. There's Work to Be Done Before Mid December.</h1>
       <hr class="rule-gold" />
-      <p class="lede" style="max-width: 580px;">Your shares are worth real money now. The next few months are when the decisions get made: what to sell, when to sell, and how to handle the taxes. A little planning now goes a long way.</p>
+      <p class="lede">Your shares are worth real money now. The next few months are when the decisions get made: what to sell, when to sell, and how to handle the taxes. A little planning now goes a long way.</p>
       <div class="hero-actions">
         <!-- TODO: swap for a dedicated SpaceX booking link when ready -->
         <a href="right-fit" class="btn btn--gold">Book a Call <span class="arrow">→</span></a>
