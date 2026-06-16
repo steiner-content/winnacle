@@ -17,6 +17,26 @@ body {
 /* ============================================================
    Top nav — sticky to top of viewport
    ============================================================ */
+
+/* Utility bar — slim gold promo strip that sits above the nav.
+   Add <a class="util-bar" href="…">…</a> immediately before <nav class="topnav">. */
+.util-bar {
+  display: block;
+  background: var(--ww-gradient-gold);
+  color: var(--ww-navy-deep);
+  text-align: center;
+  font-family: var(--ff-body);
+  font-size: var(--fs-13);
+  font-weight: var(--fw-subhead);
+  letter-spacing: 0.02em;
+  padding: 9px 20px;
+  text-decoration: none;
+  border: 0;
+  transition: filter var(--dur-fast) var(--ease-standard);
+}
+.util-bar:hover { filter: brightness(1.05); color: var(--ww-navy-deep); border: 0; }
+.util-bar b { color: var(--ww-navy-deep); font-weight: var(--fw-strong); }
+
 .topnav {
   position: sticky; top: 0; z-index: 30;
   background: rgba(251,247,238,0.94);
